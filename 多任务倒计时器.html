@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>多任务倒计时器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        #timers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+        .timer-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 380px;
+        }
+        .timer-display {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin: 15px 0;
+            text-align: center;
+        }
+        input {
+            width: 70px;
+            padding: 8px;
+            margin: 6px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="text"] {
+            width: 250px;
+            font-size: 16px;
+        }
+        button {
+            padding: 8px 16px;
+            margin: 6px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .start-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .stop-btn {
+            background-color: #f44336;
+            color: white;
+        }
+        .reset-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .timer-controls {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .time-input-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 8px 0;
+            gap: 4px;
+        }
+        .time-separator {
+            font-size: 18px;
+            color: #333;
+            margin: 0 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>多任务倒计时器</h1>
+    <div id="timers"></div>
+
+    <script>
+        class Timer {
+            constructor(id) {
+                this.id = id;
+                this.interval = null;
+                this.remainingTime = 0;
+                this.createTimerElement();
+            }
+
+            createTimerElement() {
+                const container = document.createElement('div');
+                container.className = 'timer-container';
+                container.innerHTML = `
+                    <div>
+                        <input type="text" id="taskName${this.id}" placeholder="输入任务名称" 
+                            value="任务 ${this.id}">
+                    </div>
+                    <div class="time-input-container">
+                        <input type="number" id="minutes${this.id}" min="0" placeholder="分钟">
+                        <span class="time-separator">:</span>
+                        <input type="number" id="seconds${this.id}" min="0" max="59" placeholder="秒">
+                    </div>
+                    <div class="timer-display" id="display${this.id}">00:00</div>
+                    <div class="timer-controls">
+                        <button class="start-btn" onclick="timers[${this.id-1}].start()">开始</button>
+                        <button class="stop-btn" onclick="timers[${this.id-1}].stop()">暂停</button>
+                        <button class="reset-btn" onclick="timers[${this.id-1}].reset()">重置</button>
+                    </div>
+                `;
+                document.getElementById('timers').appendChild(container);
+            }
+
+            start() {
+                if (!this.interval) {
+                    if (this.remainingTime === 0) {
+                        const minutes = parseInt(document.getElementById(`minutes${this.id}`).value) || 0;
+                        const seconds = parseInt(document.getElementById(`seconds${this.id}`).value) || 0;
+                        this.remainingTime = minutes * 60 + seconds;
+                    }
+                    
+                    if (this.remainingTime > 0) {
+                        this.interval = setInterval(() => {
+                            this.remainingTime--;
+                            this.updateDisplay();
+                            
+                            if (this.remainingTime <= 0) {
+                                this.stop();
+                                const taskName = document.getElementById(`taskName${this.id}`).value;
+                                alert(`${taskName} 时间到！`);
+                            }
+                        }, 1000);
+                    }
+                }
+            }
+
+            stop() {
+                if (this.interval) {
+                    clearInterval(this.interval);
+                    this.interval = null;
+                }
+            }
+
+            reset() {
+                this.stop();
+                this.remainingTime = 0;
+                document.getElementById(`minutes${this.id}`).value = '';
+                document.getElementById(`seconds${this.id}`).value = '';
+                this.updateDisplay();
+            }
+
+            updateDisplay() {
+                const minutes = Math.floor(this.remainingTime / 60);
+                const seconds = this.remainingTime % 60;
+                const display = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                document.getElementById(`display${this.id}`).textContent = display;
+            }
+        }
+
+        // 创建9个计时器
+        const timers = [];
+        for (let i = 1; i <= 9; i++) {
+            timers.push(new Timer(i));
+        }
+    </script>
+</body>
+</html> 
