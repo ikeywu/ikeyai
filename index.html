@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI 工具导航 - 收录最新最好用的 AI 工具，包括 ChatGPT、Midjourney、Stable Diffusion 等，分类清晰，快速找到你需要的 AI 工具">
+    <meta name="description" content="AI 工具导航 - 收录 150+ 款实用 AI 工具，包括 ChatGPT、Midjourney、Stable Diffusion 等，分类清晰，快速找到你需要的 AI 工具">
     <meta name="keywords" content="AI 工具，AI 导航，ChatGPT，Midjourney，AI 绘画，AI 写作，人工智能工具，AI 工具大全">
     <meta name="author" content="AI 工具导航">
     <title>AI 工具导航 - 发现最新最好用的人工智能工具</title>
@@ -14,12 +14,12 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">🤖 AI 工具导航</div>
+            <div class="logo">🧭 AI 工具导航</div>
             <ul class="nav-links">
                 <li><a href="#tools">工具库</a></li>
                 <li><a href="#categories">分类</a></li>
+                <li><a href="#favorites">收藏</a></li>
                 <li><a href="#about">关于</a></li>
-                <li><a href="privacy.html">隐私政策</a></li>
             </ul>
         </nav>
     </header>
@@ -28,11 +28,16 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <h1>🚀 发现最新 AI 工具</h1>
-                <p>收录 100+ 款实用 AI 工具，让 AI 为你的工作生活赋能</p>
+                <h1>发现好用的 AI 工具</h1>
+                <p>收录 150+ 款实用工具，让 AI 为你的工作生活赋能</p>
+                
+                <!-- 网站统计 -->
+                <div id="siteStats" class="site-stats"></div>
+                
+                <!-- 搜索框 -->
                 <div class="search-box">
                     <input type="text" id="searchInput" placeholder="搜索 AI 工具，例如：ChatGPT、绘画、写作...">
-                    <button onclick="searchTools()">🔍 搜索</button>
+                    <button onclick="searchTools()">搜索</button>
                 </div>
             </div>
         </section>
@@ -52,32 +57,48 @@
             </div>
         </div>
 
-        <!-- Categories -->
-        <section id="categories" class="categories-section">
-            <div class="container">
-                <h2>📁 分类浏览</h2>
-                <div class="category-grid">
-                    <button class="category-btn active" data-category="all">全部</button>
-                    <button class="category-btn" data-category="chat">💬 对话聊天</button>
-                    <button class="category-btn" data-category="image">🎨 图像绘画</button>
-                    <button class="category-btn" data-category="writing">✍️ 写作创作</button>
-                    <button class="category-btn" data-category="video">🎬 视频处理</button>
-                    <button class="category-btn" data-category="code">💻 编程开发</button>
-                    <button class="category-btn" data-category="audio">🎵 音频音乐</button>
-                    <button class="category-btn" data-category="productivity">📊 办公效率</button>
-                    <button class="category-btn" data-category="data">📈 数据分析</button>
-                </div>
-            </div>
-        </section>
+        <!-- 主内容区 -->
+        <div class="container main-layout">
+            <!-- 左侧边栏：分类 + 收藏 -->
+            <aside class="sidebar">
+                <!-- 分类 -->
+                <section id="categories" class="sidebar-section">
+                    <h3>📁 分类</h3>
+                    <div class="category-list">
+                        <button class="category-btn active" data-category="all">全部工具</button>
+                        <button class="category-btn" data-category="chat">💬 对话聊天</button>
+                        <button class="category-btn" data-category="image">🎨 图像绘画</button>
+                        <button class="category-btn" data-category="writing">✍️ 写作创作</button>
+                        <button class="category-btn" data-category="video">🎬 视频处理</button>
+                        <button class="category-btn" data-category="code">💻 编程开发</button>
+                        <button class="category-btn" data-category="audio">🎵 音频音乐</button>
+                        <button class="category-btn" data-category="productivity">📊 办公效率</button>
+                        <button class="category-btn" data-category="data">📈 数据分析</button>
+                    </div>
+                </section>
 
-        <!-- Tools Grid -->
-        <section id="tools" class="tools-section">
-            <div class="container">
-                <div class="tools-grid" id="toolsGrid">
+                <!-- 收藏 -->
+                <section id="favorites" class="sidebar-section">
+                    <h3>❤️ 收藏</h3>
+                    <div id="favoritesList" class="favorites-list"></div>
+                </section>
+            </aside>
+
+            <!-- 右侧：工具列表 -->
+            <section id="tools" class="tools-container">
+                <div class="tools-header">
+                    <h2>工具库</h2>
+                    <div class="tools-actions">
+                        <span class="results-count" id="resultsCount"></span>
+                        <button id="viewToggle" class="view-toggle" title="切换视图">⊞</button>
+                    </div>
+                </div>
+                
+                <div class="tools-grid tools-grid" id="toolsGrid">
                     <!-- 工具卡片由 JS 动态生成 -->
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <!-- 广告位：工具列表下方 -->
         <div class="container">
@@ -97,8 +118,8 @@
         <!-- About Section -->
         <section id="about" class="about-section">
             <div class="container">
-                <h2>关于 AI 工具导航</h2>
-                <p>AI 工具导航是一个专业的 AI 工具发现平台，致力于帮助用户快速找到适合自己需求的人工智能工具。</p>
+                <h2>关于本站</h2>
+                <p>AI 工具导航是一个实用的 AI 工具发现平台，致力于帮助用户快速找到适合自己需求的人工智能工具。</p>
                 <p>我们持续收录最新、最实用的 AI 工具，涵盖对话、绘画、写作、视频、编程等多个领域。</p>
                 <div class="features">
                     <div class="feature">
@@ -111,11 +132,11 @@
                     </div>
                     <div class="feature">
                         <span class="feature-icon">📱</span>
-                        <span>移动端适配</span>
+                        <span>移动适配</span>
                     </div>
                     <div class="feature">
                         <span class="feature-icon">💰</span>
-                        <span>免费使用</span>
+                        <span>完全免费</span>
                     </div>
                 </div>
             </div>
