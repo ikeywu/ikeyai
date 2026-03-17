@@ -652,49 +652,7 @@ nav {
     font-size: 24px;
 }
 
-/* ===== Submit Section ===== */
-.submit-section {
-    background: var(--bg-primary);
-    padding: var(--section-spacing) 0;
-    text-align: center;
-}
 
-/* ===== Support Section ===== */
-.support-section {
-    background: linear-gradient(135deg, rgba(52, 199, 89, 0.05), rgba(0, 102, 204, 0.05));
-    padding: 60px 0;
-    text-align: center;
-    border-top: 1px solid var(--border-color);
-}
-
-.support-section h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.support-section p {
-    color: var(--text-secondary);
-    font-size: 17px;
-    margin-bottom: 24px;
-}
-
-.support-btn {
-    display: inline-block;
-    padding: 16px 40px;
-    background: linear-gradient(135deg, #34C759, #0066CC);
-    color: white;
-    text-decoration: none;
-    border-radius: 12px;
-    font-size: 17px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.support-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 24px rgba(52, 199, 89, 0.3);
-}
 
 .submit-section h2 {
     font-size: 40px;
