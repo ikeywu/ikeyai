@@ -1720,7 +1720,18 @@ function renderFavorites() {
     
     const favoriteTools = aiTools.filter(t => favorites.includes(t.id));
     if (favoriteTools.length === 0) {
-        container.innerHTML = '<p class="empty-favorites">还没有收藏工具</p>';
+        container.innerHTML = `
+            <p class="empty-favorites">还没有收藏工具</p>
+            <div class="support-sidebar">
+                <h4>❤️ 支持作者</h4>
+                <p>如果这个网站对你有帮助，欢迎请作者喝杯咖啡 ☕</p>
+                <div class="wechat-qr-sidebar">
+                    <img src="https://picsum.photos/seed/wechat276016212/280/280" alt="微信收款码" class="qr-code-small">
+                    <p class="qr-name">吴宇飞</p>
+                    <p class="qr-tip">微信扫码支持作者</p>
+                </div>
+            </div>
+        `;
     } else {
         container.innerHTML = favoriteTools.map(tool => `
             <div class="favorite-item" onclick="showToolDetail(${tool.id})">
@@ -1728,6 +1739,19 @@ function renderFavorites() {
                 <button class="remove-favorite" onclick="event.stopPropagation(); toggleFavorite(${tool.id})">✕</button>
             </div>
         `).join('');
+        
+        // 添加支持作者到收藏列表底部
+        container.innerHTML += `
+            <div class="support-sidebar">
+                <h4>❤️ 支持作者</h4>
+                <p>如果这个网站对你有帮助，欢迎请作者喝杯咖啡 ☕</p>
+                <div class="wechat-qr-sidebar">
+                    <img src="https://picsum.photos/seed/wechat276016212/280/280" alt="微信收款码" class="qr-code-small">
+                    <p class="qr-name">吴宇飞</p>
+                    <p class="qr-tip">微信扫码支持作者</p>
+                </div>
+            </div>
+        `;
     }
 }
 
