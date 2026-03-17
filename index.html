@@ -63,7 +63,7 @@
             <aside class="sidebar">
                 <!-- 分类 -->
                 <section id="categories" class="sidebar-section">
-                    <h3>📁 分类</h3>
+                    <h3>分类</h3>
                     <div class="category-list">
                         <button class="category-btn active" data-category="all">全部工具</button>
                         <button class="category-btn" data-category="chat">💬 对话聊天</button>
@@ -79,7 +79,7 @@
 
                 <!-- 收藏 -->
                 <section id="favorites" class="sidebar-section">
-                    <h3>❤️ 收藏</h3>
+                    <h3>收藏</h3>
                     <div id="favoritesList" class="favorites-list"></div>
                 </section>
             </aside>
@@ -89,12 +89,18 @@
                 <div class="tools-header">
                     <h2>工具库</h2>
                     <div class="tools-actions">
+                        <select id="sortSelect" class="sort-select">
+                            <option value="default">默认排序</option>
+                            <option value="hot">🔥 热门优先</option>
+                            <option value="free">💰 免费优先</option>
+                            <option value="name">📝 名称排序</option>
+                        </select>
                         <span class="results-count" id="resultsCount"></span>
                         <button id="viewToggle" class="view-toggle" title="切换视图">⊞</button>
                     </div>
                 </div>
                 
-                <div class="tools-grid tools-grid" id="toolsGrid">
+                <div class="tools-grid" id="toolsGrid">
                     <!-- 工具卡片由 JS 动态生成 -->
                 </div>
             </section>

@@ -275,7 +275,17 @@ nav {
 }
 
 .favorite-icon {
-    font-size: 20px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favorite-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 .favorite-name {
@@ -338,6 +348,27 @@ nav {
     color: var(--text-secondary);
 }
 
+.sort-select {
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sort-select:hover {
+    border-color: var(--text-tertiary);
+}
+
+.sort-select:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
 .view-toggle {
     background: var(--bg-secondary);
     border: none;
@@ -390,21 +421,22 @@ nav {
     margin-bottom: 16px;
 }
 
-.tool-icon {
-    font-size: 40px;
+.tool-logo {
     width: 64px;
     height: 64px;
+    background: var(--bg-secondary);
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-secondary);
-    border-radius: 16px;
     flex-shrink: 0;
+    overflow: hidden;
 }
 
-.tool-info {
-    flex: 1;
-    min-width: 0;
+.tool-logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
 
 .tool-info h3 {
@@ -416,6 +448,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .hot-badge {
@@ -427,14 +460,24 @@ nav {
     font-weight: 500;
 }
 
-.tool-info .tag {
-    display: inline-block;
-    padding: 4px 12px;
-    background: var(--bg-secondary);
+.china-badge {
+    font-size: 12px;
+    background: linear-gradient(135deg, #DE2910, #FFDE00);
+    color: white;
+    padding: 4px 10px;
     border-radius: 20px;
-    font-size: 13px;
-    color: var(--text-secondary);
     font-weight: 500;
+}
+
+.tool-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.tool-tags-inline {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
 }
 
 .tool-card p {
@@ -669,16 +712,22 @@ footer p {
     border-bottom: 1px solid var(--border-color);
 }
 
-.tool-detail-icon {
-    font-size: 56px;
+.tool-detail-logo {
     width: 100px;
     height: 100px;
+    background: var(--bg-secondary);
+    border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-secondary);
-    border-radius: 24px;
     flex-shrink: 0;
+    overflow: hidden;
+}
+
+.tool-detail-logo img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
 }
 
 .tool-detail-info h2 {
