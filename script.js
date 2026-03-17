@@ -1694,9 +1694,6 @@ function renderTools(tools) {
         return `
         <div class="tool-card" data-id="${tool.id}" onclick="showToolDetail(${tool.id})">
             <div class="tool-header">
-                <div class="tool-logo">
-                    <img src="${getInitialLogo(tool.name)}" alt="${tool.name}" data-logo="${tool.logo}" loading="lazy">
-                </div>
                 <div class="tool-info">
                     <h3>${tool.name} ${tool.hot ? '<span class="hot-badge">🔥</span>' : ''} ${tool.chinese ? '<span class="china-badge">🇨🇳</span>' : ''}</h3>
                     <div class="tool-tags-inline">
@@ -1714,19 +1711,6 @@ function renderTools(tools) {
             </div>
         </div>
     `}).join('');
-    
-    // 懒加载 Logo
-    setTimeout(() => {
-        grid.querySelectorAll('img[data-logo]').forEach(img => {
-            const logoUrl = img.dataset.logo;
-            if (logoUrl) {
-                img.src = logoUrl;
-                img.onerror = () => {
-                    img.src = img.src; // 保持首字母
-                };
-            }
-        });
-    }, 100);
 }
 
 // 渲染收藏
@@ -1740,9 +1724,6 @@ function renderFavorites() {
     } else {
         container.innerHTML = favoriteTools.map(tool => `
             <div class="favorite-item" onclick="showToolDetail(${tool.id})">
-                <span class="favorite-icon">
-                    <img src="${getInitialLogo(tool.name)}" alt="${tool.name}">
-                </span>
                 <span class="favorite-name">${tool.name}</span>
                 <button class="remove-favorite" onclick="event.stopPropagation(); toggleFavorite(${tool.id})">✕</button>
             </div>
@@ -1890,9 +1871,6 @@ function showToolDetail(toolId) {
     
     detail.innerHTML = `
         <div class="tool-detail-header">
-            <div class="tool-detail-logo">
-                <img src="${getInitialLogo(tool.name)}" alt="${tool.name}" data-logo="${tool.logo}">
-            </div>
             <div class="tool-detail-info">
                 <h2>${tool.name} ${tool.hot ? '<span class="hot-badge">🔥</span>' : ''} ${tool.chinese ? '<span class="china-badge">🇨🇳</span>' : ''}</h2>
                 <div class="tool-detail-tags">
@@ -1925,14 +1903,6 @@ function showToolDetail(toolId) {
     `;
     
     modal.classList.add('active');
-    
-    // 懒加载详情 Logo
-    setTimeout(() => {
-        const img = detail.querySelector('.tool-detail-logo img');
-        if (img && img.dataset.logo) {
-            img.src = img.dataset.logo;
-        }
-    }, 100);
 }
 
 // 关闭模态框
