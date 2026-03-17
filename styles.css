@@ -711,6 +711,17 @@ footer p {
     font-weight: 500;
 }
 
+.tool-detail-body {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 40px;
+    margin-bottom: 32px;
+}
+
+.tool-detail-main {
+    min-width: 0;
+}
+
 .tool-detail-description {
     color: var(--text-secondary);
     font-size: 17px;
@@ -718,14 +729,54 @@ footer p {
     margin-bottom: 32px;
 }
 
-.tool-detail-features h3,
-.tool-detail-price h3 {
+.tool-detail-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-card {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.info-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.info-card .price-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--accent-blue);
+    margin: 0;
+}
+
+.info-card .url-link {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.info-card .url-link:hover {
+    text-decoration: underline;
+}
+
+.tool-detail-features h3 {
     font-size: 16px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 16px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
 }
 
 .tool-detail-features ul {
@@ -746,13 +797,6 @@ footer p {
     left: 0;
     color: #34C759;
     font-weight: 600;
-}
-
-.tool-detail-price .price-text {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--accent-blue);
-    margin-bottom: 32px;
 }
 
 .tool-detail-footer {
@@ -858,6 +902,15 @@ footer p {
     
     .modal-content {
         padding: 32px 24px;
+    }
+    
+    .tool-detail-body {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .tool-detail-sidebar {
+        order: -1;
     }
     
     .tool-detail-footer {

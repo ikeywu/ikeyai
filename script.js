@@ -1880,18 +1880,39 @@ function showToolDetail(toolId) {
             </div>
         </div>
         
-        <p class="tool-detail-description">${tool.description}</p>
-        
-        <div class="tool-detail-features">
-            <h3>主要功能</h3>
-            <ul>
-                ${tool.features.map(f => `<li>${f}</li>`).join('')}
-            </ul>
-        </div>
-        
-        <div class="tool-detail-price">
-            <h3>价格</h3>
-            <p class="price-text">${tool.price}</p>
+        <div class="tool-detail-body">
+            <div class="tool-detail-main">
+                <p class="tool-detail-description">${tool.description}</p>
+                
+                <div class="tool-detail-features">
+                    <h3>主要功能</h3>
+                    <ul>
+                        ${tool.features.map(f => `<li>${f}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="tool-detail-sidebar">
+                <div class="info-card">
+                    <h4>📍 所属国家</h4>
+                    <p>${tool.chinese ? '🇨🇳 中国' : '🇺🇸 美国'}</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>🚀 使用方式</h4>
+                    <p>${getUsageType(tool.category)}</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>💰 价格</h4>
+                    <p class="price-text">${tool.price}</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>🌐 访问链接</h4>
+                    <a href="${tool.url}" target="_blank" rel="noopener" class="url-link">${new URL(tool.url).hostname}</a>
+                </div>
+            </div>
         </div>
         
         <div class="tool-detail-footer">
@@ -1948,6 +1969,21 @@ function getCategoryName(category) {
         data: '📈 数据'
     };
     return names[category] || category;
+}
+
+// 获取使用方式
+function getUsageType(category) {
+    const types = {
+        chat: '网页 / App / API',
+        image: '网页 / Discord / API',
+        writing: '网页 / 浏览器插件',
+        video: '网页 / App',
+        code: 'IDE 插件 / 网页',
+        audio: '网页 / API',
+        productivity: '网页 / App / 集成',
+        data: '网页 / API'
+    };
+    return types[category] || '网页 / API';
 }
 
 // 点击模态框外部关闭
