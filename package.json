@@ -1,0 +1,23 @@
+{
+  "name": "ai-tools-nav",
+  "version": "1.0.0",
+  "description": "AI 工具导航 - 发现最新最好用的人工智能工具",
+  "scripts": {
+    "dev": "npx serve .",
+    "deploy": "wrangler pages deploy . --project-name=ai-tools-nav"
+  },
+  "keywords": [
+    "AI 工具",
+    "AI 导航",
+    "ChatGPT",
+    "Midjourney",
+    "人工智能",
+    "工具导航"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0",
+    "wrangler": "^3.0.0"
+  }
+}
