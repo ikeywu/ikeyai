@@ -1,4 +1,4 @@
-// AI 工具数据库 - 带官方 Logo
+// AI 工具数据库 - 精简版（按需加载 Logo）
 const aiTools = [
     // 💬 对话聊天 (15 个)
     {
@@ -30,7 +30,7 @@ const aiTools = [
     {
         id: 3,
         name: "文心一言",
-        logo: "https://yiyan.baidu.com/static/img/logo.png",
+        logo: "",
         category: "chat",
         tags: ["对话", "中文", "百度"],
         price: "免费",
@@ -43,7 +43,7 @@ const aiTools = [
     {
         id: 4,
         name: "通义千问",
-        logo: "https://img.alicdn.com/imgextra/i2/O1CN01KqQ3uN1MbFQvJKdWZ_!!6000000001455-2-tps-200-200.png",
+        logo: "",
         category: "chat",
         tags: ["对话", "阿里", "多模态"],
         price: "免费",
@@ -56,7 +56,7 @@ const aiTools = [
     {
         id: 5,
         name: "Kimi",
-        logo: "https://kimi.moonshot.cn/assets/logo.png",
+        logo: "",
         category: "chat",
         tags: ["对话", "长文本", "月之暗面"],
         price: "免费",
@@ -69,7 +69,7 @@ const aiTools = [
     {
         id: 6,
         name: "智谱清言",
-        logo: "https://chatglm.cn/assets/favicon.png",
+        logo: "",
         category: "chat",
         tags: ["对话", "清华", "中文"],
         price: "免费",
@@ -82,7 +82,7 @@ const aiTools = [
     {
         id: 7,
         name: "讯飞星火",
-        logo: "https://xinghuo.xfyun.cn/assets/favicon.png",
+        logo: "",
         category: "chat",
         tags: ["对话", "科大讯飞", "语音"],
         price: "免费",
@@ -95,7 +95,7 @@ const aiTools = [
     {
         id: 8,
         name: "DeepSeek",
-        logo: "https://chat.deepseek.com/assets/favicon.png",
+        logo: "",
         category: "chat",
         tags: ["对话", "深度求索", "推理"],
         price: "免费",
@@ -108,7 +108,7 @@ const aiTools = [
     {
         id: 9,
         name: "Doubao",
-        logo: "https://doubao.com/assets/favicon.png",
+        logo: "",
         category: "chat",
         tags: ["对话", "字节", "多功能"],
         price: "免费",
@@ -121,7 +121,7 @@ const aiTools = [
     {
         id: 10,
         name: "Grok",
-        logo: "https://x.ai/assets/favicon.png",
+        logo: "",
         category: "chat",
         tags: ["对话", "xAI", "马斯克"],
         price: "$22/月",
@@ -134,7 +134,7 @@ const aiTools = [
     {
         id: 11,
         name: "Pi",
-        logo: "https://pi.ai/assets/favicon.png",
+        logo: "",
         category: "chat",
         tags: ["陪伴", "情感", "虚拟朋友"],
         price: "免费",
@@ -147,7 +147,7 @@ const aiTools = [
     {
         id: 12,
         name: "Perplexity",
-        logo: "https://www.perplexity.ai/favicon.ico",
+        logo: "",
         category: "chat",
         tags: ["搜索", "问答", "引用"],
         price: "免费 / $20/月",
@@ -160,7 +160,7 @@ const aiTools = [
     {
         id: 13,
         name: "YouChat",
-        logo: "https://you.com/assets/favicon.png",
+        logo: "",
         category: "chat",
         tags: ["搜索", "对话", "实时"],
         price: "免费",
@@ -173,7 +173,7 @@ const aiTools = [
     {
         id: 14,
         name: "Character.ai",
-        logo: "https://character.ai/assets/favicon.png",
+        logo: "",
         category: "chat",
         tags: ["角色扮演", "娱乐", "虚拟人"],
         price: "免费 / $5/月",
@@ -186,7 +186,7 @@ const aiTools = [
     {
         id: 15,
         name: "Replika",
-        logo: "https://replika.ai/assets/favicon.png",
+        logo: "",
         category: "chat",
         tags: ["陪伴", "情感", "虚拟朋友"],
         price: "免费 / $8/月",
@@ -201,7 +201,7 @@ const aiTools = [
     {
         id: 20,
         name: "Midjourney",
-        logo: "https://midjourney.com/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "艺术", "高质量"],
         price: "$10/月起",
@@ -214,7 +214,7 @@ const aiTools = [
     {
         id: 21,
         name: "Stable Diffusion",
-        logo: "https://stability.ai/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "开源", "本地部署"],
         price: "免费",
@@ -227,7 +227,7 @@ const aiTools = [
     {
         id: 22,
         name: "DALL-E 3",
-        logo: "https://openai.com/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "OpenAI", "精准"],
         price: "通过 ChatGPT Plus",
@@ -240,7 +240,7 @@ const aiTools = [
     {
         id: 23,
         name: "Leonardo AI",
-        logo: "https://leonardo.ai/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "游戏", "设计"],
         price: "免费 / $10/月",
@@ -253,7 +253,7 @@ const aiTools = [
     {
         id: 24,
         name: "Canva AI",
-        logo: "https://canva.com/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["设计", "模板", "易用"],
         price: "免费 / $12/月",
@@ -266,7 +266,7 @@ const aiTools = [
     {
         id: 25,
         name: "Adobe Firefly",
-        logo: "https://adobe.com/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "Adobe", "商业"],
         price: "免费 / $10/月",
@@ -279,7 +279,7 @@ const aiTools = [
     {
         id: 26,
         name: "Bing Image Creator",
-        logo: "https://bing.com/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "微软", "免费"],
         price: "免费",
@@ -292,7 +292,7 @@ const aiTools = [
     {
         id: 27,
         name: "Ideogram",
-        logo: "https://ideogram.ai/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "文字", "设计"],
         price: "免费 / $8/月",
@@ -305,7 +305,7 @@ const aiTools = [
     {
         id: 28,
         name: "Playground AI",
-        logo: "https://playgroundai.com/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "免费", "社交"],
         price: "免费 / $15/月",
@@ -318,7 +318,7 @@ const aiTools = [
     {
         id: 29,
         name: "Clipdrop",
-        logo: "https://clipdrop.co/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["图像处理", "抠图", "Stability"],
         price: "免费 / $10/月",
@@ -331,7 +331,7 @@ const aiTools = [
     {
         id: 30,
         name: "Remove.bg",
-        logo: "https://remove.bg/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["抠图", "背景移除", "免费"],
         price: "免费 / $9/月",
@@ -344,7 +344,7 @@ const aiTools = [
     {
         id: 31,
         name: "Magnific AI",
-        logo: "https://magnific.ai/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["放大", "增强", "高清"],
         price: "$39/月",
@@ -357,7 +357,7 @@ const aiTools = [
     {
         id: 32,
         name: "Krea AI",
-        logo: "https://krea.ai/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "实时", "设计"],
         price: "免费 / $10/月",
@@ -370,7 +370,7 @@ const aiTools = [
     {
         id: 33,
         name: "SeaArt",
-        logo: "https://seaart.ai/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "免费", "亚洲"],
         price: "免费",
@@ -383,7 +383,7 @@ const aiTools = [
     {
         id: 34,
         name: "LiblibAI",
-        logo: "https://liblib.art/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "中国", "模型"],
         price: "免费",
@@ -396,7 +396,7 @@ const aiTools = [
     {
         id: 35,
         name: "Recraft",
-        logo: "https://recraft.ai/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["设计", "矢量", "图标"],
         price: "免费 / $12/月",
@@ -409,7 +409,7 @@ const aiTools = [
     {
         id: 36,
         name: "Flux",
-        logo: "https://blackforestlabs.ai/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "开源", "高质量"],
         price: "免费",
@@ -422,7 +422,7 @@ const aiTools = [
     {
         id: 37,
         name: "ComfyUI",
-        logo: "https://github.com/comfyanonymous/ComfyUI/raw/master/comfyui.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "工作流", "专业"],
         price: "免费",
@@ -435,7 +435,7 @@ const aiTools = [
     {
         id: 38,
         name: "Fooocus",
-        logo: "https://github.com/lllyasviel/Fooocus/raw/master/assets/logo.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "简单", "本地"],
         price: "免费",
@@ -448,7 +448,7 @@ const aiTools = [
     {
         id: 39,
         name: "Draw Things",
-        logo: "https://drawthings.ai/assets/favicon.png",
+        logo: "",
         category: "image",
         tags: ["绘画", "移动端", "iOS"],
         price: "免费",
@@ -463,7 +463,7 @@ const aiTools = [
     {
         id: 50,
         name: "Jasper",
-        logo: "https://jasper.ai/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "营销", "专业"],
         price: "$49/月",
@@ -476,7 +476,7 @@ const aiTools = [
     {
         id: 51,
         name: "Notion AI",
-        logo: "https://notion.so/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "笔记", "整理"],
         price: "$10/月",
@@ -489,7 +489,7 @@ const aiTools = [
     {
         id: 52,
         name: "Grammarly",
-        logo: "https://grammarly.com/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "校对", "英语"],
         price: "免费 / $12/月",
@@ -502,7 +502,7 @@ const aiTools = [
     {
         id: 53,
         name: "Copy.ai",
-        logo: "https://copy.ai/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "营销", "社交媒体"],
         price: "免费 / $36/月",
@@ -515,7 +515,7 @@ const aiTools = [
     {
         id: 54,
         name: "Writesonic",
-        logo: "https://writesonic.com/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "营销", "SEO"],
         price: "免费 / $20/月",
@@ -528,7 +528,7 @@ const aiTools = [
     {
         id: 55,
         name: "Rytr",
-        logo: "https://rytr.me/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "便宜", "多语言"],
         price: "免费 / $9/月",
@@ -541,7 +541,7 @@ const aiTools = [
     {
         id: 56,
         name: "Sudowrite",
-        logo: "https://sudowrite.com/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "小说", "创意"],
         price: "$19/月",
@@ -554,7 +554,7 @@ const aiTools = [
     {
         id: 57,
         name: "Wordtune",
-        logo: "https://wordtune.com/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "改写", "润色"],
         price: "免费 / $10/月",
@@ -567,7 +567,7 @@ const aiTools = [
     {
         id: 58,
         name: "Quillbot",
-        logo: "https://quillbot.com/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["改写", "paraphrase", "免费"],
         price: "免费 / $10/月",
@@ -580,7 +580,7 @@ const aiTools = [
     {
         id: 59,
         name: "Hemingway Editor",
-        logo: "https://hemingwayapp.com/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["编辑", "简洁", "可读性"],
         price: "免费 / $20 一次性",
@@ -593,7 +593,7 @@ const aiTools = [
     {
         id: 60,
         name: "NovelAI",
-        logo: "https://novelai.net/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["小说", "创意", "无限制"],
         price: "$10/月",
@@ -606,7 +606,7 @@ const aiTools = [
     {
         id: 61,
         name: "ClosersCopy",
-        logo: "https://closerscopy.com/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "销售", "营销"],
         price: "$49/月",
@@ -619,7 +619,7 @@ const aiTools = [
     {
         id: 62,
         name: "Anyword",
-        logo: "https://anyword.com/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "预测", "营销"],
         price: "$49/月",
@@ -632,7 +632,7 @@ const aiTools = [
     {
         id: 63,
         name: "Peppertype",
-        logo: "https://peppertype.ai/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "营销", "快速"],
         price: "$35/月",
@@ -645,7 +645,7 @@ const aiTools = [
     {
         id: 64,
         name: "INK Editor",
-        logo: "https://inkforall.com/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "SEO", "WordPress"],
         price: "免费 / $19/月",
@@ -658,7 +658,7 @@ const aiTools = [
     {
         id: 65,
         name: "Frase",
-        logo: "https://frase.io/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "SEO", "研究"],
         price: "$15/月",
@@ -671,7 +671,7 @@ const aiTools = [
     {
         id: 66,
         name: "MarketMuse",
-        logo: "https://marketmuse.com/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "企业", "SEO"],
         price: "$149/月",
@@ -684,7 +684,7 @@ const aiTools = [
     {
         id: 67,
         name: "笔神",
-        logo: "https://bishen.ink/assets/favicon.png",
+        logo: "",
         category: "writing",
         tags: ["写作", "中文", "素材"],
         price: "免费 / ¥30/月",
@@ -699,7 +699,7 @@ const aiTools = [
     {
         id: 80,
         name: "Runway",
-        logo: "https://runwayml.com/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["视频", "编辑", "生成"],
         price: "免费 / $15/月",
@@ -712,7 +712,7 @@ const aiTools = [
     {
         id: 81,
         name: "Sora",
-        logo: "https://openai.com/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["视频", "生成", "OpenAI"],
         price: "未公开",
@@ -725,7 +725,7 @@ const aiTools = [
     {
         id: 82,
         name: "Descript",
-        logo: "https://descript.com/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["视频", "编辑", "转录"],
         price: "免费 / $15/月",
@@ -738,7 +738,7 @@ const aiTools = [
     {
         id: 83,
         name: "HeyGen",
-        logo: "https://heygen.com/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["视频", "数字人", "口播"],
         price: "免费 / $29/月",
@@ -751,7 +751,7 @@ const aiTools = [
     {
         id: 84,
         name: "Synthesia",
-        logo: "https://synthesia.io/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["视频", "数字人", "企业"],
         price: "$30/月",
@@ -764,7 +764,7 @@ const aiTools = [
     {
         id: 85,
         name: "Pictory",
-        logo: "https://pictory.ai/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["视频", "摘要", "营销"],
         price: "$19/月",
@@ -777,7 +777,7 @@ const aiTools = [
     {
         id: 86,
         name: "InVideo",
-        logo: "https://invideo.io/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["视频", "模板", "社交媒体"],
         price: "免费 / $15/月",
@@ -790,7 +790,7 @@ const aiTools = [
     {
         id: 87,
         name: "Lumen5",
-        logo: "https://lumen5.com/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["视频", "博客", "营销"],
         price: "免费 / $29/月",
@@ -803,7 +803,7 @@ const aiTools = [
     {
         id: 88,
         name: "Fliki",
-        logo: "https://fliki.ai/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["视频", "配音", "多语言"],
         price: "免费 / $21/月",
@@ -816,7 +816,7 @@ const aiTools = [
     {
         id: 89,
         name: "Elai.io",
-        logo: "https://elai.io/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["视频", "数字人", "教育"],
         price: "$23/月",
@@ -829,7 +829,7 @@ const aiTools = [
     {
         id: 90,
         name: "D-ID",
-        logo: "https://d-id.com/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["视频", "照片", "说话"],
         price: "免费 / $6/月",
@@ -842,7 +842,7 @@ const aiTools = [
     {
         id: 91,
         name: "Kaiber",
-        logo: "https://kaiber.ai/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["视频", "艺术", "音乐"],
         price: "$5/月",
@@ -855,7 +855,7 @@ const aiTools = [
     {
         id: 92,
         name: "Captions",
-        logo: "https://captions.ai/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["字幕", "短视频", "社交媒体"],
         price: "免费 / $10/月",
@@ -868,7 +868,7 @@ const aiTools = [
     {
         id: 93,
         name: "Opus Clip",
-        logo: "https://opus.pro/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["剪辑", "短视频", "自动化"],
         price: "免费 / $19/月",
@@ -881,7 +881,7 @@ const aiTools = [
     {
         id: 94,
         name: "Veed.io",
-        logo: "https://veed.io/assets/favicon.png",
+        logo: "",
         category: "video",
         tags: ["视频", "编辑", "在线"],
         price: "免费 / $18/月",
@@ -896,7 +896,7 @@ const aiTools = [
     {
         id: 110,
         name: "GitHub Copilot",
-        logo: "https://github.githubassets.com/assets/copilot-logo.png",
+        logo: "",
         category: "code",
         tags: ["编程", "代码", "GitHub"],
         price: "$10/月",
@@ -909,7 +909,7 @@ const aiTools = [
     {
         id: 111,
         name: "Cursor",
-        logo: "https://cursor.sh/assets/favicon.png",
+        logo: "",
         category: "code",
         tags: ["编程", "IDE", "AI"],
         price: "免费 / $20/月",
@@ -922,7 +922,7 @@ const aiTools = [
     {
         id: 112,
         name: "Replit AI",
-        logo: "https://replit.com/assets/favicon.png",
+        logo: "",
         category: "code",
         tags: ["编程", "在线 IDE", "学习"],
         price: "免费 / $20/月",
@@ -935,7 +935,7 @@ const aiTools = [
     {
         id: 113,
         name: "Codeium",
-        logo: "https://codeium.com/assets/favicon.png",
+        logo: "",
         category: "code",
         tags: ["编程", "免费", "补全"],
         price: "免费",
@@ -948,7 +948,7 @@ const aiTools = [
     {
         id: 114,
         name: "Tabnine",
-        logo: "https://tabnine.com/assets/favicon.png",
+        logo: "",
         category: "code",
         tags: ["编程", "补全", "隐私"],
         price: "免费 / $12/月",
@@ -961,7 +961,7 @@ const aiTools = [
     {
         id: 115,
         name: "Amazon CodeWhisperer",
-        logo: "https://aws.amazon.com/assets/favicon.png",
+        logo: "",
         category: "code",
         tags: ["编程", "AWS", "免费"],
         price: "免费 / $19/月",
@@ -974,7 +974,7 @@ const aiTools = [
     {
         id: 116,
         name: "Sourcegraph Cody",
-        logo: "https://sourcegraph.com/assets/favicon.png",
+        logo: "",
         category: "code",
         tags: ["编程", "搜索", "理解"],
         price: "免费 / $9/月",
@@ -987,7 +987,7 @@ const aiTools = [
     {
         id: 117,
         name: "Continue",
-        logo: "https://continue.dev/assets/favicon.png",
+        logo: "",
         category: "code",
         tags: ["编程", "开源", "本地"],
         price: "免费",
@@ -1000,7 +1000,7 @@ const aiTools = [
     {
         id: 118,
         name: "Windsurf",
-        logo: "https://codeium.com/assets/favicon.png",
+        logo: "",
         category: "code",
         tags: ["编程", "IDE", "智能"],
         price: "免费 / $15/月",
@@ -1013,7 +1013,7 @@ const aiTools = [
     {
         id: 119,
         name: "Bolt.new",
-        logo: "https://bolt.new/assets/favicon.png",
+        logo: "",
         category: "code",
         tags: ["编程", "全栈", "快速"],
         price: "免费 / $20/月",
@@ -1026,7 +1026,7 @@ const aiTools = [
     {
         id: 120,
         name: "v0",
-        logo: "https://v0.dev/assets/favicon.png",
+        logo: "",
         category: "code",
         tags: ["前端", "UI", "生成"],
         price: "免费 / $20/月",
@@ -1039,7 +1039,7 @@ const aiTools = [
     {
         id: 121,
         name: "Lovable",
-        logo: "https://lovable.dev/assets/favicon.png",
+        logo: "",
         category: "code",
         tags: ["编程", "全栈", "简单"],
         price: "免费 / $25/月",
@@ -1052,7 +1052,7 @@ const aiTools = [
     {
         id: 122,
         name: "Durable",
-        logo: "https://durable.co/assets/favicon.png",
+        logo: "",
         category: "code",
         tags: ["建站", "快速", "AI"],
         price: "$12/月",
@@ -1065,7 +1065,7 @@ const aiTools = [
     {
         id: 123,
         name: "Framer AI",
-        logo: "https://framer.com/assets/favicon.png",
+        logo: "",
         category: "code",
         tags: ["建站", "设计", "无代码"],
         price: "免费 / $15/月",
@@ -1078,7 +1078,7 @@ const aiTools = [
     {
         id: 124,
         name: "Relume",
-        logo: "https://relume.io/assets/favicon.png",
+        logo: "",
         category: "code",
         tags: ["设计", "线框图", "Figma"],
         price: "免费 / $15/月",
@@ -1093,7 +1093,7 @@ const aiTools = [
     {
         id: 140,
         name: "Suno AI",
-        logo: "https://suno.ai/assets/favicon.png",
+        logo: "",
         category: "audio",
         tags: ["音乐", "生成", "歌曲"],
         price: "免费 / $10/月",
@@ -1106,7 +1106,7 @@ const aiTools = [
     {
         id: 141,
         name: "ElevenLabs",
-        logo: "https://elevenlabs.io/assets/favicon.png",
+        logo: "",
         category: "audio",
         tags: ["语音", "TTS", "克隆"],
         price: "免费 / $5/月",
@@ -1119,7 +1119,7 @@ const aiTools = [
     {
         id: 142,
         name: "Udio",
-        logo: "https://udio.com/assets/favicon.png",
+        logo: "",
         category: "audio",
         tags: ["音乐", "生成", "高质量"],
         price: "免费",
@@ -1132,7 +1132,7 @@ const aiTools = [
     {
         id: 143,
         name: "Stable Audio",
-        logo: "https://stability.ai/assets/favicon.png",
+        logo: "",
         category: "audio",
         tags: ["音乐", "Stability", "音效"],
         price: "免费 / $12/月",
@@ -1145,7 +1145,7 @@ const aiTools = [
     {
         id: 144,
         name: "Mubert",
-        logo: "https://mubert.com/assets/favicon.png",
+        logo: "",
         category: "audio",
         tags: ["音乐", "流媒体", "BGM"],
         price: "免费 / $14/月",
@@ -1158,7 +1158,7 @@ const aiTools = [
     {
         id: 145,
         name: "AIVA",
-        logo: "https://aiva.ai/assets/favicon.png",
+        logo: "",
         category: "audio",
         tags: ["音乐", "古典", "配乐"],
         price: "免费 / $11/月",
@@ -1171,7 +1171,7 @@ const aiTools = [
     {
         id: 146,
         name: "Soundraw",
-        logo: "https://soundraw.io/assets/favicon.png",
+        logo: "",
         category: "audio",
         tags: ["音乐", "定制", "视频配乐"],
         price: "$17/月",
@@ -1184,7 +1184,7 @@ const aiTools = [
     {
         id: 147,
         name: "Beatoven",
-        logo: "https://beatoven.ai/assets/favicon.png",
+        logo: "",
         category: "audio",
         tags: ["音乐", "视频", "情绪"],
         price: "免费 / $15/月",
@@ -1197,7 +1197,7 @@ const aiTools = [
     {
         id: 148,
         name: "Play.ht",
-        logo: "https://play.ht/assets/favicon.png",
+        logo: "",
         category: "audio",
         tags: ["语音", "TTS", "播客"],
         price: "免费 / $31/月",
@@ -1210,7 +1210,7 @@ const aiTools = [
     {
         id: 149,
         name: "Murf.ai",
-        logo: "https://murf.ai/assets/favicon.png",
+        logo: "",
         category: "audio",
         tags: ["语音", "配音", "企业"],
         price: "免费 / $26/月",
@@ -1223,7 +1223,7 @@ const aiTools = [
     {
         id: 150,
         name: "Lovo",
-        logo: "https://lovo.ai/assets/favicon.png",
+        logo: "",
         category: "audio",
         tags: ["语音", "配音", "游戏"],
         price: "免费 / $24/月",
@@ -1236,7 +1236,7 @@ const aiTools = [
     {
         id: 151,
         name: "Resemble AI",
-        logo: "https://resemble.ai/assets/favicon.png",
+        logo: "",
         category: "audio",
         tags: ["语音", "克隆", "实时"],
         price: "$0.006/秒",
@@ -1251,7 +1251,7 @@ const aiTools = [
     {
         id: 170,
         name: "Microsoft 365 Copilot",
-        logo: "https://microsoft.com/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["办公", "Office", "微软"],
         price: "$30/月",
@@ -1264,7 +1264,7 @@ const aiTools = [
     {
         id: 171,
         name: "Gamma",
-        logo: "https://gamma.app/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["PPT", "演示", "生成"],
         price: "免费 / $10/月",
@@ -1277,7 +1277,7 @@ const aiTools = [
     {
         id: 172,
         name: "Beautiful.ai",
-        logo: "https://beautiful.ai/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["PPT", "设计", "自动化"],
         price: "$12/月",
@@ -1290,7 +1290,7 @@ const aiTools = [
     {
         id: 173,
         name: "Otter.ai",
-        logo: "https://otter.ai/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["转录", "会议", "笔记"],
         price: "免费 / $10/月",
@@ -1303,7 +1303,7 @@ const aiTools = [
     {
         id: 174,
         name: "Fireflies.ai",
-        logo: "https://fireflies.ai/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["会议", "转录", "CRM"],
         price: "免费 / $10/月",
@@ -1316,7 +1316,7 @@ const aiTools = [
     {
         id: 175,
         name: "Mem",
-        logo: "https://mem.ai/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["笔记", "AI", "知识管理"],
         price: "免费 / $10/月",
@@ -1329,7 +1329,7 @@ const aiTools = [
     {
         id: 176,
         name: "Taskade",
-        logo: "https://taskade.com/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["任务", "协作", "AI"],
         price: "免费 / $8/月",
@@ -1342,7 +1342,7 @@ const aiTools = [
     {
         id: 177,
         name: "Tome",
-        logo: "https://tome.app/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["演示", "故事", "AI"],
         price: "免费 / $10/月",
@@ -1355,7 +1355,7 @@ const aiTools = [
     {
         id: 178,
         name: "Decktopus",
-        logo: "https://decktopus.com/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["PPT", "演示", "快速"],
         price: "免费 / $10/月",
@@ -1368,7 +1368,7 @@ const aiTools = [
     {
         id: 179,
         name: "SlidesAI",
-        logo: "https://slidesai.io/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["PPT", "Google Slides", "扩展"],
         price: "免费 / $10/月",
@@ -1381,7 +1381,7 @@ const aiTools = [
     {
         id: 180,
         name: "Plus AI",
-        logo: "https://plusai.com/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["PPT", "Google Slides", "专业"],
         price: "$10/月",
@@ -1394,7 +1394,7 @@ const aiTools = [
     {
         id: 181,
         name: "Scribe",
-        logo: "https://scribehow.com/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["文档", "流程", "教程"],
         price: "免费 / $15/月",
@@ -1407,7 +1407,7 @@ const aiTools = [
     {
         id: 182,
         name: "Tango",
-        logo: "https://tango.us/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["文档", "教程", "流程"],
         price: "免费 / $15/月",
@@ -1420,7 +1420,7 @@ const aiTools = [
     {
         id: 183,
         name: "Zapier AI",
-        logo: "https://zapier.com/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["自动化", "工作流", "集成"],
         price: "免费 / $20/月",
@@ -1433,7 +1433,7 @@ const aiTools = [
     {
         id: 184,
         name: "Make",
-        logo: "https://make.com/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["自动化", "工作流", "可视化"],
         price: "免费 / $9/月",
@@ -1446,7 +1446,7 @@ const aiTools = [
     {
         id: 185,
         name: "n8n",
-        logo: "https://n8n.io/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["自动化", "开源", "自托管"],
         price: "免费 / €20/月",
@@ -1459,7 +1459,7 @@ const aiTools = [
     {
         id: 186,
         name: "Bardeen",
-        logo: "https://bardeen.ai/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["自动化", "浏览器", "快捷"],
         price: "免费 / $10/月",
@@ -1472,7 +1472,7 @@ const aiTools = [
     {
         id: 187,
         name: "Airtable AI",
-        logo: "https://airtable.com/assets/favicon.png",
+        logo: "",
         category: "productivity",
         tags: ["数据库", "表格", "AI"],
         price: "$20/用户/月",
@@ -1487,7 +1487,7 @@ const aiTools = [
     {
         id: 200,
         name: "Julius AI",
-        logo: "https://julius.ai/assets/favicon.png",
+        logo: "",
         category: "data",
         tags: ["数据", "分析", "可视化"],
         price: "免费 / $20/月",
@@ -1500,7 +1500,7 @@ const aiTools = [
     {
         id: 201,
         name: "Consensus",
-        logo: "https://consensus.app/assets/favicon.png",
+        logo: "",
         category: "data",
         tags: ["研究", "论文", "搜索"],
         price: "免费 / $20/月",
@@ -1513,7 +1513,7 @@ const aiTools = [
     {
         id: 202,
         name: "Elicit",
-        logo: "https://elicit.org/assets/favicon.png",
+        logo: "",
         category: "data",
         tags: ["研究", "论文", "AI"],
         price: "免费 / $10/月",
@@ -1526,7 +1526,7 @@ const aiTools = [
     {
         id: 203,
         name: "Scite",
-        logo: "https://scite.ai/assets/favicon.png",
+        logo: "",
         category: "data",
         tags: ["研究", "引用", "验证"],
         price: "$5/月",
@@ -1539,7 +1539,7 @@ const aiTools = [
     {
         id: 204,
         name: "ResearchRabbit",
-        logo: "https://researchrabbit.ai/assets/favicon.png",
+        logo: "",
         category: "data",
         tags: ["研究", "文献", "可视化"],
         price: "免费",
@@ -1552,7 +1552,7 @@ const aiTools = [
     {
         id: 205,
         name: "ChatPDF",
-        logo: "https://chatpdf.com/assets/favicon.png",
+        logo: "",
         category: "data",
         tags: ["PDF", "文档", "问答"],
         price: "免费 / $5/月",
@@ -1565,7 +1565,7 @@ const aiTools = [
     {
         id: 206,
         name: "Humata",
-        logo: "https://humata.ai/assets/favicon.png",
+        logo: "",
         category: "data",
         tags: ["PDF", "文档", "企业"],
         price: "免费 / $10/月",
@@ -1578,7 +1578,7 @@ const aiTools = [
     {
         id: 207,
         name: "AskYourPDF",
-        logo: "https://askyourpdf.com/assets/favicon.png",
+        logo: "",
         category: "data",
         tags: ["PDF", "问答", "免费"],
         price: "免费 / $10/月",
@@ -1591,7 +1591,7 @@ const aiTools = [
     {
         id: 208,
         name: "Tableau AI",
-        logo: "https://tableau.com/assets/favicon.png",
+        logo: "",
         category: "data",
         tags: ["数据", "可视化", "企业"],
         price: "$70/用户/月",
@@ -1604,7 +1604,7 @@ const aiTools = [
     {
         id: 209,
         name: "Power BI AI",
-        logo: "https://powerbi.microsoft.com/assets/favicon.png",
+        logo: "",
         category: "data",
         tags: ["数据", "微软", "BI"],
         price: "$10/用户/月",
@@ -1617,7 +1617,7 @@ const aiTools = [
     {
         id: 210,
         name: "Akkio",
-        logo: "https://akkio.com/assets/favicon.png",
+        logo: "",
         category: "data",
         tags: ["数据", "预测", "无代码"],
         price: "$49/月",
@@ -1630,7 +1630,7 @@ const aiTools = [
     {
         id: 211,
         name: "Obviously AI",
-        logo: "https://obviously.ai/assets/favicon.png",
+        logo: "",
         category: "data",
         tags: ["数据", "预测", "快速"],
         price: "$99/月",
@@ -1645,8 +1645,28 @@ const aiTools = [
 // 当前状态
 let currentCategory = 'all';
 let favorites = JSON.parse(localStorage.getItem('aiToolsFavorites') || '[]');
-let viewMode = 'grid'; // grid 或 list
-let sortBy = 'default'; // default, hot, free, name
+let viewMode = 'grid';
+let sortBy = 'default';
+
+// 首字母 Logo 生成
+function getInitialLogo(name) {
+    const initial = name.charAt(0).toUpperCase();
+    const colors = ['#0066CC', '#FF6B6B', '#34C759', '#FF9500', '#AF52DE', '#FF2D55'];
+    const color = colors[name.length % colors.length];
+    return `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23f5f5f7' width='100' height='100' rx='16'/><text x='50' y='62' font-size='50' text-anchor='middle' fill='${encodeURIComponent(color)}' font-family='system-ui' font-weight='600'>${initial}</text></svg>`;
+}
+
+// 懒加载 Logo
+function loadLogo(imgElement, logoUrl, name) {
+    if (logoUrl) {
+        imgElement.src = logoUrl;
+        imgElement.onerror = () => {
+            imgElement.src = getInitialLogo(name);
+        };
+    } else {
+        imgElement.src = getInitialLogo(name);
+    }
+}
 
 // 初始化
 document.addEventListener('DOMContentLoaded', () => {
@@ -1664,7 +1684,6 @@ function renderTools(tools) {
     const grid = document.getElementById('toolsGrid');
     if (!grid) return;
     
-    // 更新结果计数
     const countEl = document.getElementById('resultsCount');
     if (countEl) {
         countEl.textContent = `${tools.length} 个工具`;
@@ -1676,10 +1695,10 @@ function renderTools(tools) {
         <div class="tool-card" data-id="${tool.id}" onclick="showToolDetail(${tool.id})">
             <div class="tool-header">
                 <div class="tool-logo">
-                    <img src="${tool.logo}" alt="${tool.name}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23f5f5f7%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2255%22 font-size=%2240%22 text-anchor=%22middle%22 fill=%22%2386868b%22>${tool.name.charAt(0)}</text></svg>'">
+                    <img src="${getInitialLogo(tool.name)}" alt="${tool.name}" data-logo="${tool.logo}" loading="lazy">
                 </div>
                 <div class="tool-info">
-                    <h3>${tool.name} ${tool.hot ? '<span class="hot-badge">🔥 热门</span>' : ''} ${tool.chinese ? '<span class="china-badge">🇨🇳 国内</span>' : ''}</h3>
+                    <h3>${tool.name} ${tool.hot ? '<span class="hot-badge">🔥</span>' : ''} ${tool.chinese ? '<span class="china-badge">🇨🇳</span>' : ''}</h3>
                     <div class="tool-tags-inline">
                         ${tool.tags.slice(0, 3).map(t => `<span class="mini-tag">${t}</span>`).join('')}
                     </div>
@@ -1695,6 +1714,19 @@ function renderTools(tools) {
             </div>
         </div>
     `}).join('');
+    
+    // 懒加载 Logo
+    setTimeout(() => {
+        grid.querySelectorAll('img[data-logo]').forEach(img => {
+            const logoUrl = img.dataset.logo;
+            if (logoUrl) {
+                img.src = logoUrl;
+                img.onerror = () => {
+                    img.src = img.src; // 保持首字母
+                };
+            }
+        });
+    }, 100);
 }
 
 // 渲染收藏
@@ -1708,7 +1740,9 @@ function renderFavorites() {
     } else {
         container.innerHTML = favoriteTools.map(tool => `
             <div class="favorite-item" onclick="showToolDetail(${tool.id})">
-                <span class="favorite-icon">${tool.logo ? `<img src="${tool.logo}" alt="${tool.name}">` : tool.name.charAt(0)}</span>
+                <span class="favorite-icon">
+                    <img src="${getInitialLogo(tool.name)}" alt="${tool.name}">
+                </span>
                 <span class="favorite-name">${tool.name}</span>
                 <button class="remove-favorite" onclick="event.stopPropagation(); toggleFavorite(${tool.id})">✕</button>
             </div>
@@ -1806,12 +1840,10 @@ function setupSort() {
 function filterAndSort() {
     let filtered = aiTools;
     
-    // 分类筛选
     if (currentCategory !== 'all') {
         filtered = filtered.filter(t => t.category === currentCategory);
     }
     
-    // 搜索筛选
     const searchInput = document.getElementById('searchInput');
     if (searchInput && searchInput.value.trim()) {
         const query = searchInput.value.toLowerCase().trim();
@@ -1822,7 +1854,6 @@ function filterAndSort() {
         );
     }
     
-    // 排序
     if (sortBy === 'hot') {
         filtered = filtered.sort((a, b) => (b.hot ? 1 : 0) - (a.hot ? 1 : 0));
     } else if (sortBy === 'free') {
@@ -1860,10 +1891,10 @@ function showToolDetail(toolId) {
     detail.innerHTML = `
         <div class="tool-detail-header">
             <div class="tool-detail-logo">
-                <img src="${tool.logo}" alt="${tool.name}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23f5f5f7%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2255%22 font-size=%2240%22 text-anchor=%22middle%22 fill=%22%2386868b%22>${tool.name.charAt(0)}</text></svg>'">
+                <img src="${getInitialLogo(tool.name)}" alt="${tool.name}" data-logo="${tool.logo}">
             </div>
             <div class="tool-detail-info">
-                <h2>${tool.name} ${tool.hot ? '<span class="hot-badge">🔥 热门</span>' : ''} ${tool.chinese ? '<span class="china-badge">🇨🇳 国内</span>' : ''}</h2>
+                <h2>${tool.name} ${tool.hot ? '<span class="hot-badge">🔥</span>' : ''} ${tool.chinese ? '<span class="china-badge">🇨🇳</span>' : ''}</h2>
                 <div class="tool-detail-tags">
                     <span class="tag">${getCategoryName(tool.category)}</span>
                     ${tool.tags.map(t => `<span class="tag">${t}</span>`).join('')}
@@ -1894,6 +1925,14 @@ function showToolDetail(toolId) {
     `;
     
     modal.classList.add('active');
+    
+    // 懒加载详情 Logo
+    setTimeout(() => {
+        const img = detail.querySelector('.tool-detail-logo img');
+        if (img && img.dataset.logo) {
+            img.src = img.dataset.logo;
+        }
+    }, 100);
 }
 
 // 关闭模态框
@@ -1912,11 +1951,9 @@ function toggleFavorite(toolId) {
     }
     localStorage.setItem('aiToolsFavorites', JSON.stringify(favorites));
     
-    // 重新渲染
     filterAndSort();
     renderFavorites();
     
-    // 如果模态框打开，更新按钮状态
     const modal = document.getElementById('toolModal');
     if (modal && modal.classList.contains('active')) {
         const btn = document.querySelector('.favorite-btn-large');
